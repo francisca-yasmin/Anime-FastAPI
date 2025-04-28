@@ -38,14 +38,23 @@ async def buscar_anime(anime_id: int):
     #lança uma exceção HTTP onde a resposta é retornado em formato JSON
     raise HTTPException(status_code=404, detail="Anime não encontrado")
 
-# @app.post("/animes/criar")
-# async def create_anime(anime: Anime):
-#     for existe in anime_db.values():
-#          if existe["titulo"].lower() == anime.titulo.lower(): #verifica se já existe
-#  
-# raise HTTPException(status_code=404, detail='O anime já existe')
-@app.post("/animes/")
-async def create_item(anime: Anime):
+#criar um anime novo
+@app.post("/animes/crar/")
+async def create_anime(anime: Anime):
+    return anime
+
+    
+#deletar um anime
+@app.delete("/animes/deletar/")
+async def delete_anime(anime: Anime):
+    if anime in anime_db:
+        removido = anime_db.pop(anime)
+        return {'mensagem': 'anime removido com sucesso', 'anime': removido}
+    raise HTTPException(status_code=404, detail="Anime que você quer excluir não existe")
+    
+    
+@app.update("/animes/atualizar/")
+async def update_anime(anime: Anime):
     return anime
     
     
