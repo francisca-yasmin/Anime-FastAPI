@@ -7,8 +7,7 @@ A API foi feita com FastAPI e conta com as funcionalidades de visualizar, criar,
 3. Para rodar a aplicação, digite o comando: `fastapi dev main.py`
 4. Na url no servidor depois da barra pode cololcar `/doc/` que será direcionado para a página de documentação da API.
 
-![Exemplo da documentaçao](https://github.com/user-attachments/assets/77725cea-875f-4bd1-996d-d1af09727929
- "Exemplo tela de documentação.")
+<img src="https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png" alt="Descrição" width="300" height="300"/>
 
 Este é um exemplo da tela que você vai visualizar assim qeu abrir a documentação, onde você poderá testar todas as funcionalidades da API.
 
