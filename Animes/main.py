@@ -18,7 +18,7 @@ def salvar_animes(db):
     with open(ARQUIVO_DB, "w", encoding="utf-8") as a:
         json.dump(db, a, indent=4, ensure_ascii=False)
 
-# Carrega animes do arquivo
+#carrega animes do arquivo
 anime_db = carregar_animes()
 
 class Anime(BaseModel):
@@ -26,12 +26,12 @@ class Anime(BaseModel):
     categoria: str
     episodios: int
 
-# Listar todos os animes
+#listar todos os animes
 @app.get("/animes/")
 async def get_all_animes():
     return anime_db
 
-# Buscar anime por ID
+#buscar por id
 @app.get("/animes/{anime_id}")
 async def read_anime(anime_id: int):
     anime = anime_db.get(str(anime_id))
@@ -39,7 +39,7 @@ async def read_anime(anime_id: int):
         return anime
     raise HTTPException(status_code=404, detail="Anime não encontrado")
 
-# Criar novo anime
+#criar novo anime
 @app.post("/animes/", status_code=status.HTTP_201_CREATED)
 async def create_anime(anime: Anime):
     novo_id = max(map(int, anime_db.keys()), default=0) + 1
@@ -47,7 +47,7 @@ async def create_anime(anime: Anime):
     salvar_animes(anime_db)
     return {"id": novo_id, **anime.dict()}
 
-# Deletar anime
+#deletar anime
 @app.delete("/animes/deletar/{anime_id}")
 async def delete_anime(anime_id: int):
     anime_id_str = str(anime_id)
@@ -61,7 +61,7 @@ async def delete_anime(anime_id: int):
         "mensagem": "Anime removido com sucesso!"
     }
 
-# Atualizar anime
+#atualizar anime
 @app.put("/animes/atualizar/{anime_id}")
 async def update_anime(anime_id: int, anime: Anime):
     anime_id_str = str(anime_id)
