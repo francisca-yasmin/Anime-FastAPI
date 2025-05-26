@@ -1,0 +1,32 @@
+{
+    "1": {
+        "titulo": "Naruto",
+        "categoria": "Shounen",
+        "episodios": 700
+    },
+    "2": {
+        "titulo": "HunterxHunter",
+        "categoria": "Shounen",
+        "episodios": 148
+    },
+    "3": {
+        "titulo": "Demon Slayer",
+        "categoria": "Shounen",
+        "episodios": 63
+    },
+    "4": {
+        "titulo": "Dragon Ball",
+        "categoria": "Shounen",
+        "episodios": 696
+    },
+    "5": {
+        "nome": "DAN DA DAN",
+        "categoria": "Ação",
+        "episodios": 12
+    },
+    "6": {
+        "titulo": "Haikyu",
+        "categoria": "Esporte",
+        "episodios": 64
+    }
+}
