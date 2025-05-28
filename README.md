@@ -7,5 +7,3 @@ A API foi feita com FastAPI e conta com as funcionalidades de visualizar, criar,
 3. Ativar a `env` com o comando `env/Scripts/activate`
 4. Para rodar a aplicação, digite o comando: `fastapi dev main.py`
 5. Na url no servidor depois da barra pode cololcar `/doc/` que será direcionado para a página de documentação da API.
-
-**obs: Ainda em desenvolvimento**
